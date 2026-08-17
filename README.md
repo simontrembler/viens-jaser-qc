@@ -2,7 +2,7 @@
 
 Agents et skills à qui tu t’adresses en bon vieux québécois — ou à la française, si c’est ça que tu parles.
 
-Premier skill : **parlure-qc** (standard [Agent Skills](https://github.com/agentskills/agentskills) : un `SKILL.md`, plusieurs outils). Pas de rule Cursor.
+Premier skill : **parlure-qc** ([Agent Skills](https://agentskills.io/home) : un `SKILL.md` + `references/`). Pas de rule Cursor.
 
 ## parlure-qc
 
@@ -20,17 +20,20 @@ Override : `en joual`, `québécois léger`, `à la française`. Région défaut
 
 L’anglais technique reste de l’anglais. Code, diffs, identifiants : inchangés.
 
-Une seule copie, ici :
+Une seule copie, layout [Agent Skills](https://agentskills.io/specification) :
 
 ```
 .agents/skills/parlure-qc/
   SKILL.md
-  registers.md
-  lexicon.md
-  examples.md
-  sacres.md
-  regions.md
+  references/
+    registers.md
+    lexicon.md
+    examples.md
+    sacres.md
+    regions.md
 ```
+
+`SKILL.md` se charge à l’activation ; les fichiers dans `references/` seulement au besoin ([progressive disclosure](https://agentskills.io/home#how-do-agent-skills-work)).
 
 Dans ce repo, le skill se charge tout seul (Cursor, Codex, Copilot, Gemini via `.agents/skills`).
 
@@ -53,4 +56,4 @@ SRC=/home/simon-tremblay/github/viens-jaser-qc/.agents/skills/parlure-qc
 4. `traduis ça en trois registres` + un paragraphe — trois blocs, même propos.
 5. Diff en anglais — prose peut rester en anglais ; le code ne se traduit pas.
 
-Si ça empile `tiguidou` + `lâche pas la patate` + `tire-toi une bûche` sur un bug Traefik, c’est cassé : [examples.md](.agents/skills/parlure-qc/examples.md).
+Si ça empile `tiguidou` + `lâche pas la patate` + `tire-toi une bûche` sur un bug Traefik, c’est cassé : [examples.md](.agents/skills/parlure-qc/references/examples.md).
