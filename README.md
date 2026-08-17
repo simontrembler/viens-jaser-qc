@@ -20,11 +20,10 @@ Override : `en joual`, `québécois léger`, `à la française`. Région défaut
 
 L’anglais technique reste de l’anglais. Code, diffs, identifiants : inchangés.
 
-Canonical :
+Une seule copie, ici :
 
 ```
-.agents/skills/parlure-qc/     # source
-.cursor/skills/parlure-qc  ->  symlink
+.agents/skills/parlure-qc/
   SKILL.md
   registers.md
   lexicon.md
@@ -43,9 +42,8 @@ SRC=/home/simon-tremblay/github/viens-jaser-qc/.agents/skills/parlure-qc
 
 | Outil | Commande |
 |---|---|
-| Cursor | `mkdir -p ~/.cursor/skills && ln -sfn "$SRC" ~/.cursor/skills/parlure-qc` |
+| Cursor, Codex, Copilot, Gemini | `mkdir -p ~/.agents/skills && ln -sfn "$SRC" ~/.agents/skills/parlure-qc` |
 | Claude Code | `mkdir -p ~/.claude/skills && ln -sfn "$SRC" ~/.claude/skills/parlure-qc` |
-| Codex / Copilot / Gemini | `mkdir -p ~/.agents/skills && ln -sfn "$SRC" ~/.agents/skills/parlure-qc` |
 
 ### Tester
 
