@@ -2,7 +2,17 @@
 
 Agents et skills à qui tu t’adresses en bon vieux québécois — ou à la française, si c’est ça que tu parles.
 
-Premier skill : **parlure-qc** ([Agent Skills](https://agentskills.io/home) : un `SKILL.md` + `references/`). Pas de rule Cursor.
+Deux skills, layout [Agent Skills](https://agentskills.io/home) (`SKILL.md` + `references/`). Pas de rule Cursor.
+
+## charte-humaine
+
+Charte de communication empathique et non-paternaliste. S'applique à **chaque** interaction, dans toutes les langues.
+
+- Zéro injonction : pas de « tu dois », « il faut », « arrête de ».
+- Solidarité du « on/nous », validation émotionnelle, souveraineté de l'utilisateur.
+- Respiration visuelle : réponses courtes et aérées.
+
+Voir [SKILL.md](.agents/skills/charte-humaine/SKILL.md) et [references/vocabulaire.md](.agents/skills/charte-humaine/references/vocabulaire.md) pour la matrice de transformation lexicale complète.
 
 ## parlure-qc
 
@@ -23,14 +33,19 @@ L’anglais technique reste de l’anglais. Code, diffs, identifiants : inchang�
 Une seule copie, layout [Agent Skills](https://agentskills.io/specification) :
 
 ```
-.agents/skills/parlure-qc/
-  SKILL.md
-  references/
-    registers.md
-    lexicon.md
-    examples.md
-    sacres.md
-    regions.md
+.agents/skills/
+  charte-humaine/
+    SKILL.md
+    references/
+      vocabulaire.md
+  parlure-qc/
+    SKILL.md
+    references/
+      registers.md
+      lexicon.md
+      examples.md
+      sacres.md
+      regions.md
 ```
 
 `SKILL.md` se charge à l’activation ; les fichiers dans `references/` seulement au besoin ([progressive disclosure](https://agentskills.io/home#how-do-agent-skills-work)).
@@ -40,13 +55,13 @@ Dans ce repo, le skill se charge tout seul (Cursor, Codex, Copilot, Gemini via `
 ### Install perso (autres repos / autres outils)
 
 ```bash
-SRC=/home/simon-tremblay/github/viens-jaser-qc/.agents/skills/parlure-qc
+BASE=/home/simon-tremblay/github/viens-jaser-qc/.agents/skills
 ```
 
 | Outil | Commande |
 |---|---|
-| Cursor, Codex, Copilot, Gemini | `mkdir -p ~/.agents/skills && ln -sfn "$SRC" ~/.agents/skills/parlure-qc` |
-| Claude Code | `mkdir -p ~/.claude/skills && ln -sfn "$SRC" ~/.claude/skills/parlure-qc` |
+| Cursor, Codex, Copilot, Gemini | `mkdir -p ~/.agents/skills && ln -sfn "$BASE/charte-humaine" ~/.agents/skills/charte-humaine && ln -sfn "$BASE/parlure-qc" ~/.agents/skills/parlure-qc` |
+| Claude Code | `mkdir -p ~/.claude/skills && ln -sfn "$BASE/charte-humaine" ~/.claude/skills/charte-humaine && ln -sfn "$BASE/parlure-qc" ~/.claude/skills/parlure-qc` |
 
 ### Tester
 
