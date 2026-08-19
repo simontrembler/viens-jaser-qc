@@ -105,3 +105,21 @@ READ /home/simon-tremblay/github/viens-jaser-qc/AGENTS.md BEFORE ANYTHING (skip 
 5. Diff en anglais — prose peut rester en anglais ; le code ne se traduit pas.
 
 Si ça empile `tiguidou` + `lâche pas la patate` + `tire-toi une bûche` sur un bug Traefik, c’est cassé : [examples.md](.agents/skills/parlure-qc/references/examples.md).
+
+## Skill d'exemple complet (spec)
+
+Un skill vitrine qui couvre tous les artifacts recommandés:
+
+- `.agents/skills/repo-kickstart-brief/SKILL.md`
+- `references/` (heuristics, gotchas)
+- `assets/` (template, exemple de sortie)
+- `scripts/` (scan, détection, validation)
+- `evals/` (prompts, assertions, fichiers d'entrée)
+
+Valider:
+
+```bash
+scripts/validate-skills
+python3 .agents/skills/repo-kickstart-brief/scripts/validate_brief.py \
+  .agents/skills/repo-kickstart-brief/assets/example-output.md
+```

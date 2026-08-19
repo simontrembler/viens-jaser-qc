@@ -1,0 +1,36 @@
+{
+  "skill_name": "repo-kickstart-brief",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Peux-tu me faire un brief pour commencer vite dans ce repo? Je veux savoir quoi run, quoi tester, pis les risques.",
+      "expected_output": "A short onboarding brief with stack, run/test commands, evidence from repo paths, risks, and next 3 steps.",
+      "files": [
+        "evals/files/sample-node-repo/README.md",
+        "evals/files/sample-node-repo/package.json"
+      ],
+      "assertions": [
+        "The response uses all required sections from brief-template.md including hierarchy",
+        "The hierarchy section includes at least 3 emoji-coded entries (📁/📄)",
+        "The response includes at least 3 evidence bullets with backticked paths",
+        "Run and test commands are explicit and not placeholders",
+        "The response includes exactly 3 numbered next steps"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "J'arrive sur ce projet Python, peux-tu me dire comment démarrer sans inventer de commandes?",
+      "expected_output": "A practical brief that acknowledges unknowns if run/test commands cannot be fully inferred.",
+      "files": [
+        "evals/files/sample-python-repo/README.md",
+        "evals/files/sample-python-repo/pyproject.toml"
+      ],
+      "assertions": [
+        "The hierarchy section includes emoji-coded folder/file entries",
+        "The response avoids invented frameworks or scripts not present in files",
+        "Unknowns are clearly listed in risks section when evidence is missing",
+        "At least one evidence bullet references pyproject.toml or README.md"
+      ]
+    }
+  ]
+}

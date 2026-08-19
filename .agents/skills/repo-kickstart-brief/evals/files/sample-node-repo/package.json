@@ -1,0 +1,8 @@
+{
+  "name": "sample-node-repo",
+  "private": true,
+  "scripts": {
+    "dev": "node server.js",
+    "test": "echo \"ok\""
+  }
+}
