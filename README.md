@@ -18,11 +18,11 @@ Voir [SKILL.md](.agents/skills/charte-humaine/SKILL.md) et [references/vocabulai
 
 L’agent matche le français du dernier message :
 
-| Registre | Quand |
-|---|---|
-| **joual** | `moé`/`toé`, `chu`, `t'sé`, `faque`, sacres, `tu veux-tu` |
-| **québécois léger** | français d’icitte sans phonétisation (défaut) |
-| **français de France** | lexique hexagonal, pas de québécismes |
+| Registre               | Quand                                                     |
+|------------------------|-----------------------------------------------------------|
+| **joual**              | `moé`/`toé`, `chu`, `t'sé`, `faque`, sacres, `tu veux-tu` |
+| **québécois léger**    | français d’icitte sans phonétisation (défaut)             |
+| **français de France** | lexique hexagonal, pas de québécismes                     |
 
 Override : `en joual`, `québécois léger`, `à la française`. Région défaut : Québec (capitale) ; `comme à Montréal`, `à la saguenéenne`, etc.
 
@@ -68,10 +68,10 @@ Principe : **une seule source de vérité**, puis injection par symlink selon l�
 BASE=/home/simon-tremblay/github/viens-jaser-qc/.agents/skills
 ```
 
-| Outil | Commande |
-|---|---|
+| Outil                          | Commande                                                                                                                                                |
+|--------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Cursor, Codex, Copilot, Gemini | `mkdir -p ~/.agents/skills && ln -sfn "$BASE/charte-humaine" ~/.agents/skills/charte-humaine && ln -sfn "$BASE/parlure-qc" ~/.agents/skills/parlure-qc` |
-| Claude Code | `mkdir -p ~/.claude/skills && ln -sfn "$BASE/charte-humaine" ~/.claude/skills/charte-humaine && ln -sfn "$BASE/parlure-qc" ~/.claude/skills/parlure-qc` |
+| Claude Code                    | `mkdir -p ~/.claude/skills && ln -sfn "$BASE/charte-humaine" ~/.claude/skills/charte-humaine && ln -sfn "$BASE/parlure-qc" ~/.claude/skills/parlure-qc` |
 
 Ou simplement :
 
