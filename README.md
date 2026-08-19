@@ -52,6 +52,16 @@ Une seule copie, layout [Agent Skills](https://agentskills.io/specification) :
 
 Dans ce repo, le skill se charge tout seul (Cursor, Codex, Copilot, Gemini via `.agents/skills`).
 
+## Monorepo AI components
+
+Ce repo est la source canonique de composants IA portables :
+
+- `AGENTS.md` : règles globales partagées.
+- `.agents/skills/*` : skills versionnés (`SKILL.md` + `references/`).
+- `scripts/` : distribution multi-IDE + validation.
+
+Principe : **une seule source de vérité**, puis injection par symlink selon l’IDE ciblé.
+
 ### Install perso (autres repos / autres outils)
 
 ```bash
@@ -62,6 +72,29 @@ BASE=/home/simon-tremblay/github/viens-jaser-qc/.agents/skills
 |---|---|
 | Cursor, Codex, Copilot, Gemini | `mkdir -p ~/.agents/skills && ln -sfn "$BASE/charte-humaine" ~/.agents/skills/charte-humaine && ln -sfn "$BASE/parlure-qc" ~/.agents/skills/parlure-qc` |
 | Claude Code | `mkdir -p ~/.claude/skills && ln -sfn "$BASE/charte-humaine" ~/.claude/skills/charte-humaine && ln -sfn "$BASE/parlure-qc" ~/.claude/skills/parlure-qc` |
+
+Ou simplement :
+
+```bash
+./scripts/sync-skills
+```
+
+### Scripts utilitaires
+
+- `scripts/validate-skills` : vérifie frontmatter YAML, `name`, `description`, et les liens vers `references/`.
+- `scripts/sync-skills` : sync idempotent des skills vers `~/.agents/skills` et `~/.claude/skills`.
+
+Workflow recommandé :
+
+```bash
+./scripts/validate-skills && ./scripts/sync-skills
+```
+
+Pour les autres repos, mets un `AGENTS.md` pointeur en tête :
+
+```md
+READ /home/simon-tremblay/github/viens-jaser-qc/AGENTS.md BEFORE ANYTHING (skip if missing).
+```
 
 ### Tester
 

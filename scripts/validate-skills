@@ -1,0 +1,57 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+SKILLS_ROOT="$REPO_ROOT/.agents/skills"
+
+if [ ! -d "$SKILLS_ROOT" ]; then
+  echo "Missing skills root: $SKILLS_ROOT" >&2
+  exit 1
+fi
+
+failures=0
+
+for skill_dir in "$SKILLS_ROOT"/*; do
+  [ -d "$skill_dir" ] || continue
+
+  skill_name="$(basename "$skill_dir")"
+  skill_file="$skill_dir/SKILL.md"
+
+  if [ ! -f "$skill_file" ]; then
+    echo "ERROR [$skill_name]: missing SKILL.md"
+    failures=$((failures + 1))
+    continue
+  fi
+
+  if ! rg -q '^---$' "$skill_file"; then
+    echo "ERROR [$skill_name]: missing YAML front matter delimiters"
+    failures=$((failures + 1))
+  fi
+
+  if ! rg -q '^name:\s*[A-Za-z0-9][A-Za-z0-9._-]*\s*$' "$skill_file"; then
+    echo "ERROR [$skill_name]: missing/invalid 'name' in front matter"
+    failures=$((failures + 1))
+  fi
+
+  if ! rg -q '^description:\s*".+"$|^description:\s*>-$|^description:\s*\|-$|^description:\s*\|$|^description:\s*>$' "$skill_file"; then
+    echo "ERROR [$skill_name]: missing/invalid 'description' in front matter"
+    failures=$((failures + 1))
+  fi
+
+  while IFS= read -r rel_link; do
+    rel_path="${rel_link#*](}"
+    rel_path="${rel_path%)}"
+    target="$skill_dir/$rel_path"
+    if [ ! -f "$target" ]; then
+      echo "ERROR [$skill_name]: broken reference link -> $rel_path"
+      failures=$((failures + 1))
+    fi
+  done < <(rg -o '\[[^]]+\]\((references/[^)]+)\)' "$skill_file")
+done
+
+if [ "$failures" -gt 0 ]; then
+  echo "validate-skills: $failures error(s)"
+  exit 1
+fi
+
+echo "validate-skills: all skills look good"

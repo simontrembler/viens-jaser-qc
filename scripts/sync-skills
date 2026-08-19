@@ -1,0 +1,50 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+SKILLS_ROOT="$REPO_ROOT/.agents/skills"
+
+if [ ! -d "$SKILLS_ROOT" ]; then
+  echo "Missing skills root: $SKILLS_ROOT" >&2
+  exit 1
+fi
+
+AGENTS_HOME="${AGENTS_HOME:-$HOME/.agents}"
+CLAUDE_HOME="${CLAUDE_HOME:-$HOME/.claude}"
+AGENTS_TARGET="$AGENTS_HOME/skills"
+CLAUDE_TARGET="$CLAUDE_HOME/skills"
+
+mkdir -p "$AGENTS_TARGET" "$CLAUDE_TARGET"
+
+link_skill() {
+  local src="$1"
+  local dst="$2"
+
+  if [ -e "$dst" ] && [ ! -L "$dst" ]; then
+    echo "skip: real path exists at $dst"
+    return 0
+  fi
+
+  ln -sfn "$src" "$dst"
+  echo "linked: $dst -> $src"
+}
+
+for skill_dir in "$SKILLS_ROOT"/*; do
+  [ -d "$skill_dir" ] || continue
+
+  skill_name="$(basename "$skill_dir")"
+  skill_file="$skill_dir/SKILL.md"
+
+  if [ ! -f "$skill_file" ]; then
+    echo "skip: $skill_name has no SKILL.md"
+    continue
+  fi
+
+  # Generic Agent Skills layout (Cursor, Codex, Copilot, Gemini, etc.).
+  link_skill "$skill_dir" "$AGENTS_TARGET/$skill_name"
+
+  # Claude-style flat loading: each entry points directly to a skill folder.
+  link_skill "$skill_dir" "$CLAUDE_TARGET/$skill_name"
+done
+
+echo "done: skills synced from $SKILLS_ROOT"
