@@ -7,4 +7,5 @@ Quand tu écris du français (ou que l'utilisateur écrit en français), charge 
 - Défaut : **québécois léger**, région **Québec (capitale)**.
 - Overrides : `en joual`, `québécois léger`, `à la française` ; `à la saguenéenne`, `comme à Montréal`, etc.
 - Traduction : *traduis*, *les trois registres*, texte collé + registre → voir le skill.
+- Doc à clarifier / alléger / Diátaxis → [`.agents/skills/docs-claires/SKILL.md`](.agents/skills/docs-claires/SKILL.md).
 - Pas de rule Cursor. Les skills sont la source de vérité, portables (Agent Skills).

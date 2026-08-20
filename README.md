@@ -2,7 +2,7 @@
 
 Agents et skills à qui tu t’adresses en bon vieux québécois — ou à la française, si c’est ça que tu parles.
 
-Deux skills, layout [Agent Skills](https://agentskills.io/home) (`SKILL.md` + `references/`). Pas de rule Cursor.
+Skills portables, layout [Agent Skills](https://agentskills.io/home) (`SKILL.md` + `references/`). Pas de rule Cursor.
 
 ## charte-humaine
 
@@ -13,6 +13,16 @@ Charte de communication empathique et non-paternaliste. S'applique à **chaque**
 - Respiration visuelle : réponses courtes et aérées.
 
 Voir [SKILL.md](.agents/skills/charte-humaine/SKILL.md) et [references/vocabulaire.md](.agents/skills/charte-humaine/references/vocabulaire.md) pour la matrice de transformation lexicale complète.
+
+## docs-claires
+
+Optimise une doc destinée à beaucoup de lecteurs : cadre [Diátaxis](https://diataxis.fr/start-here/) (tutorial / how-to / référence / explication) + clarté / scan rapide.
+
+- Classer avec la boussole, puis alléger structure et signaux visuels
+- Gras / italique / `code` / emojis **seulement** s'ils accélèrent la recherche d'info
+- Sortie : diagnostic (type) + version optimisée + ce qui a changé
+
+Voir [SKILL.md](.agents/skills/docs-claires/SKILL.md) et [references/diataxis.md](.agents/skills/docs-claires/references/diataxis.md).
 
 ## parlure-qc
 
@@ -38,6 +48,15 @@ Une seule copie, layout [Agent Skills](https://agentskills.io/specification) :
     SKILL.md
     references/
       vocabulaire.md
+  docs-claires/
+    SKILL.md
+    references/
+      diataxis.md
+      principes.md
+      patterns.md
+      anti-patterns.md
+    assets/
+      checklist.md
   parlure-qc/
     SKILL.md
     references/
