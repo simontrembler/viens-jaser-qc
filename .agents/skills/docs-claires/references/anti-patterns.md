@@ -17,6 +17,7 @@ Si ça mélange : **séparer** ou **lier**, ne pas « clarifier » le mélange e
 - Gras sur des phrases entières.
 - Titres décorés (`✨🌟 Section magique 🌟✨`).
 - Tableaux pour 2 éléments qui tiennent en une liste.
+- Tableaux Markdown croches (`|---|` sans padding, colonnes irrégulières) — reformater avant de livrer.
 
 ## Charge cognitive
 

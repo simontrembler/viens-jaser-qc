@@ -29,16 +29,16 @@ Les lecteurs scannent d'abord, lisent ensuite — s'ils en ont besoin.
 
 ## Tweaks visuels qui accélèrent
 
-| Signal | Quand |
-|---|---|
-| Titre H2/H3 | Changer de job / d'étape |
-| **Gras** | Mot ou expression à trouver en scroll rapide |
-| *Italique* | Nuance, exception, « optionnel » |
-| `code` | Commande, chemin, clé config, nom exact |
-| Liste | Étapes, options, inventaire |
-| Tableau | Comparaison (A vs B), mapping |
-| Callout / citation | Avertissement unique (⚠️ une fois, pas partout) |
-| Emoji en tête de titre | Ancre de scan (`🛠 Install`, `🧪 Tests`) — max ~1 par section |
+| Signal                 | Quand                                                                  |
+|------------------------|------------------------------------------------------------------------|
+| Titre H2/H3            | Changer de job / d'étape                                               |
+| **Gras**               | Mot ou expression à trouver en scroll rapide                           |
+| *Italique*             | Nuance, exception, « optionnel »                                       |
+| `code`                 | Commande, chemin, clé config, nom exact                                |
+| Liste                  | Étapes, options, inventaire                                            |
+| Tableau                | Comparaison (A vs B), mapping — **toujours aligné** (pipes droits)     |
+| Callout / citation     | Avertissement unique (⚠️ une fois, pas partout)                        |
+| Emoji en tête de titre | Ancre de scan (`🛠 Install`, `🧪 Tests`) — max ~1 par section           |
 
 ## Emojis : critère unique
 

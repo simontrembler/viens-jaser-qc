@@ -93,12 +93,41 @@ Austère. Pas de « pourquoi on a choisi… » ici → lien *About*.
 Quand le lecteur doit choisir :
 
 ```markdown
+| Situation      | Action                  |
+|----------------|-------------------------|
+| Premier setup  | Suivre **Installer**    |
+| Déjà installé  | Aller à **Lancer**      |
+| Ça casse       | Section **Dépannage**   |
+```
+
+## Tableaux alignés
+
+Tout tableau Markdown doit être formaté « droit », comme un *Format Document* VS Code / prettier markdown :
+
+1. Padding : une espace de chaque côté du contenu (`| cellule |`).
+2. Largeur de colonne = longueur du plus long contenu de la colonne (header inclus).
+3. Ligne séparateur `|---|` étirée à la même largeur que la colonne.
+4. Pipes `|` alignés verticalement d’une ligne à l’autre.
+
+**Avant (croche) :**
+
+```markdown
 | Situation | Action |
 |---|---|
 | Premier setup | Suivre **Installer** |
 | Déjà installé | Aller à **Lancer** |
-| Ça casse | Section **Dépannage** |
 ```
+
+**Après (droit) :**
+
+```markdown
+| Situation     | Action                |
+|---------------|-----------------------|
+| Premier setup | Suivre **Installer**  |
+| Déjà installé | Aller à **Lancer**    |
+```
+
+Alignement optionnel des colonnes (gauche / centre / droite) via `:---` / `:---:` / `---:` dans le séparateur, en gardant les largeurs alignées.
 
 ## Pattern « status emoji » (docs ops / runbooks)
 

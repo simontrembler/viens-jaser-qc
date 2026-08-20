@@ -27,19 +27,20 @@ Cadre structurel : [Diátaxis](https://diataxis.fr/start-here/) — quatre besoi
 2. **Classer** avec la boussole Diátaxis (ci-dessous) : un type dominant. Si le texte mélange plusieurs types → le dire dans le diagnostic et proposer un découpage ou un type prioritaire.
 3. **Diagnostiquer** en 3–5 points : flou de type, charge mentale, info enterrée, digressions hors-type.
 4. **Réécrire** pour le type choisi + clarté / scan / formatage.
-5. **Vérifier** [assets/checklist.md](assets/checklist.md).
-6. **Livrer** : diagnostic (avec type) + version optimisée + « ce qui a changé ».
+5. **Aligner** tout tableau Markdown (colonnes droites, espaces padding) — comme un *Format Document* VS Code.
+6. **Vérifier** [assets/checklist.md](assets/checklist.md).
+7. **Livrer** : diagnostic (avec type) + version optimisée + « ce qui a changé ».
 
 Une amélioration à la fois reste valide ([workflow Diátaxis](https://diataxis.fr/how-to-use-diataxis/)) : si Simon veut un petit tweak seulement, faire **un** pas utile plutôt qu'une refonte totale.
 
 ### Boussole (décision rapide)
 
-| Le contenu… | …et sert… | → type |
-|---|---|---|
-| l'**action** | l'**acquisition** de compétence (étude) | **Tutorial** |
-| l'**action** | l'**application** (travail) | **How-to** |
-| la **cognition** | l'**application** (travail) | **Référence** |
-| la **cognition** | l'**acquisition** (étude) | **Explication** |
+| Le contenu…      | …et sert…                               | → type          |
+|------------------|-----------------------------------------|-----------------|
+| l'**action**     | l'**acquisition** de compétence (étude) | **Tutorial**    |
+| l'**action**     | l'**application** (travail)             | **How-to**      |
+| la **cognition** | l'**application** (travail)             | **Référence**   |
+| la **cognition** | l'**acquisition** (étude)               | **Explication** |
 
 Questions : *action ou cognition ?* *étude ou travail ?*
 
@@ -52,14 +53,26 @@ Questions : *action ou cognition ?* *étude ou travail ?*
 
 ## Règles rapides (tous types)
 
-| Faire | Éviter |
-|---|---|
-| Un job Diátaxis par page (ou section clairement bornée) | Tutoriel + explication + référence dans le même flux |
-| Titres qui disent le besoin (`How to…`, `About…`) | Titres vagues (`Notes`, `Divers`, `Overview` fourre-tout) |
-| **Gras** pour l'ancre scannable | Gras partout |
-| `code` pour commandes, chemins, IDs | Code décoratif |
-| Emoji de section **si** ça accélère le scan | Emoji à chaque phrase |
-| Lier vers l'autre type au lieu d'y digresser | Polluer un how-to avec de la théorie |
+| Faire                                                   | Éviter                                                    |
+|---------------------------------------------------------|-----------------------------------------------------------|
+| Un job Diátaxis par page (ou section clairement bornée) | Tutoriel + explication + référence dans le même flux      |
+| Titres qui disent le besoin (`How to…`, `About…`)       | Titres vagues (`Notes`, `Divers`, `Overview` fourre-tout) |
+| **Gras** pour l'ancre scannable                         | Gras partout                                              |
+| `code` pour commandes, chemins, IDs                     | Code décoratif                                            |
+| Emoji de section **si** ça accélère le scan             | Emoji à chaque phrase                                     |
+| Lier vers l'autre type au lieu d'y digresser            | Polluer un how-to avec de la théorie                      |
+| Tableaux Markdown **alignés** (pipes + padding)         | Tableaux croches / colonnes irrégulières                  |
+
+### Tableaux Markdown (alignement)
+
+Tout tableau dans la version optimisée (et dans le skill lui-même) doit être formaté « droit » :
+
+- Une espace de chaque côté du contenu de cellule quand c’est possible : `| cellule |`
+- Largeur de colonne = plus long contenu de la colonne (header inclus)
+- Ligne séparateur `|---|` alignée sur la même largeur
+- Pipes verticaux alignés d’une ligne à l’autre (équivalent *Format Document* / prettier markdown)
+
+Détail + avant/après → section **Tableaux alignés** dans [references/patterns.md](references/patterns.md).
 
 ## Sortie
 

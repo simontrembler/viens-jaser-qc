@@ -4,12 +4,12 @@ Source : [diataxis.fr](https://diataxis.fr/start-here/). Cadre pragmatique — p
 
 ## Les quatre types
 
-| Type | Besoin | Question | Analogie |
-|---|---|---|---|
-| **Tutorial** | Apprendre (étude + action) | « Tu peux m'enseigner à… ? » | Leçon de cuisine avec un enfant |
-| **How-to** | Atteindre un but (travail + action) | « Comment je… ? » | Recette / manuel clinique |
-| **Référence** | Faits pour travailler (travail + cognition) | « Qu'est-ce que… ? » | Étiquette nutritionnelle / carte marine |
-| **Explication** | Comprendre (étude + cognition) | « Pourquoi… ? » / « Parle-moi de… » | Essai / discussion de fond |
+| Type            | Besoin                                      | Question                            | Analogie                                |
+|-----------------|---------------------------------------------|-------------------------------------|-----------------------------------------|
+| **Tutorial**    | Apprendre (étude + action)                  | « Tu peux m'enseigner à… ? »        | Leçon de cuisine avec un enfant         |
+| **How-to**      | Atteindre un but (travail + action)         | « Comment je… ? »                   | Recette / manuel clinique               |
+| **Référence**   | Faits pour travailler (travail + cognition) | « Qu'est-ce que… ? »                | Étiquette nutritionnelle / carte marine |
+| **Explication** | Comprendre (étude + cognition)              | « Pourquoi… ? » / « Parle-moi de… » | Essai / discussion de fond              |
 
 ### Tutorial
 
@@ -52,13 +52,13 @@ Même forme (étapes), besoins opposés : **étude** vs **travail**.
 Les confondre est le mélange le plus fréquent et le plus coûteux.
 Détail : [tutorials-how-to](https://diataxis.fr/tutorials-how-to/).
 
-| | Tutorial | How-to |
-|---|---|---|
-| But | Compétence de base / confiance | Tâche correctement faite |
-| Cadre | Contrôlé, sûr, rejouable | Monde réel |
-| Responsabilité | L'auteur/tuteur | L'utilisateur |
-| Choix | Une ligne | Branches possibles |
-| Complexité | Peut être avancé | Peut être basique |
+|                | Tutorial                       | How-to                   |
+|----------------|--------------------------------|--------------------------|
+| But            | Compétence de base / confiance | Tâche correctement faite |
+| Cadre          | Contrôlé, sûr, rejouable       | Monde réel               |
+| Responsabilité | L'auteur/tuteur                | L'utilisateur            |
+| Choix          | Une ligne                      | Branches possibles       |
+| Complexité     | Peut être avancé               | Peut être basique        |
 
 ### Référence ≠ Explication
 

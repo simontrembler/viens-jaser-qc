@@ -19,3 +19,4 @@
 - [ ] Aucune commande, URL ou version inventée
 - [ ] Termes techniques définis à la première occurrence (sauf référence pure déjà contextuelle)
 - [ ] Prérequis avant les actions (tutorial / how-to)
+- [ ] Tableaux Markdown alignés (pipes droits, padding, séparateurs à largeur égale)
